@@ -26,25 +26,25 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* --- Navbar --- */
 .navbar-default {
-    background-color: #fff;
-    border-bottom: 1px solid #e7e7e7;
+    background-color: #07396b;
+    border-bottom: 1px solid #055a8a;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 .navbar-brand {
     font-weight: 700;
-    color: #333 !important;
+    color: #fff !important;
     font-size: 16px;
 }
 .navbar-nav > li > a {
-    color: #333;
+    color: #fff;
     font-size: 14px;
     font-weight: 400;
 }
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
-    color: #000;
-    background-color: #f5f5f5;
+    color: #b9d9eb;
+    background-color: #0a4a7a;
 }
 
 /* --- Home Sections --- */
@@ -503,3 +503,4 @@ img { max-width: 100%; height: auto; display: block; }
     .career-card.is-open { transform: none; }
     .career-detail { animation: none; }
 }
+
