@@ -115,26 +115,34 @@
                 <div class="research-gallery">
                     <h3 class="research-gallery-title">Research Gallery</h3>
                     <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="images/research1.jpg" alt="Field research work">
-                            <div class="gallery-caption">Agricultural field experiments</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/research2.jpg" alt="UAV remote sensing">
-                            <div class="gallery-caption">UAV remote sensing operations</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/research3.png" alt="Data analysis results">
-                            <div class="gallery-caption">Data analysis and visualization</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/research4.jpg" alt="Conference presentation">
-                            <div class="gallery-caption">Academic conference participation</div>
-                        </div>
+                        <button class="gallery-item" type="button" data-gallery-src="images/research1.jpg" data-gallery-caption="Agricultural field experiments">
+                            <img src="images/research1.jpg" alt="Agricultural field experiments">
+                            <span class="gallery-caption">Agricultural field experiments</span>
+                        </button>
+                        <button class="gallery-item" type="button" data-gallery-src="images/research2.jpg" data-gallery-caption="Smart agriculture farm demonstration">
+                            <img src="images/research2.jpg" alt="Smart agriculture farm demonstration">
+                            <span class="gallery-caption">Smart agriculture farm demonstration</span>
+                        </button>
+                        <button class="gallery-item" type="button" data-gallery-src="images/research3.png" data-gallery-caption="Trait phenotyping">
+                            <img src="images/research3.png" alt="Trait phenotyping">
+                            <span class="gallery-caption">Trait phenotyping</span>
+                        </button>
+                        <button class="gallery-item" type="button" data-gallery-src="images/research4.jpg" data-gallery-caption="Data analysis and visualization">
+                            <img src="images/research4.jpg" alt="Data analysis and visualization">
+                            <span class="gallery-caption">Data analysis and visualization</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="gallery-lightbox" id="gallery-lightbox" hidden>
+            <button class="gallery-lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+            <figure class="gallery-lightbox-content">
+                <img id="gallery-lightbox-image" src="" alt="">
+                <figcaption id="gallery-lightbox-caption"></figcaption>
+            </figure>
+        </div>
         <!-- News Section -->
         <section id="news" class="home-section">
             <div class="container">

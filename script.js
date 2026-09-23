@@ -40,6 +40,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Research gallery lightbox ---
+    const galleryLightbox = document.getElementById('gallery-lightbox');
+    const galleryImage = document.getElementById('gallery-lightbox-image');
+    const galleryCaption = document.getElementById('gallery-lightbox-caption');
+    const galleryClose = document.querySelector('.gallery-lightbox-close');
+
+    const closeGallery = () => {
+        if (!galleryLightbox) return;
+        galleryLightbox.hidden = true;
+        document.body.classList.remove('gallery-open');
+        if (galleryImage) galleryImage.src = '';
+    };
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            if (!galleryLightbox || !galleryImage) return;
+            galleryImage.src = item.dataset.gallerySrc;
+            galleryImage.alt = item.dataset.galleryCaption || '';
+            if (galleryCaption) galleryCaption.textContent = item.dataset.galleryCaption || '';
+            galleryLightbox.hidden = false;
+            document.body.classList.add('gallery-open');
+            galleryClose?.focus();
+        });
+    });
+
+    galleryClose?.addEventListener('click', closeGallery);
+    galleryLightbox?.addEventListener('click', event => {
+        if (event.target === galleryLightbox) closeGallery();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && galleryLightbox && !galleryLightbox.hidden) {
+            closeGallery();
+        }
+    });
+
     // --- Smooth scroll for anchor links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
